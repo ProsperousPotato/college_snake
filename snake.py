@@ -100,6 +100,26 @@ def game_loop():
                         y1_change = snake_block
                         x1_change = 0
                         break
+                if event.key == pygame.K_LEFT:
+                    if x1_change != snake_block:
+                        x1_change = -snake_block
+                        y1_change = 0
+                        break
+                elif event.key == pygame.K_RIGHT:
+                    if x1_change != -snake_block:
+                        x1_change = snake_block
+                        y1_change = 0
+                        break
+                elif event.key == pygame.K_UP:
+                    if y1_change != snake_block:
+                        y1_change = -snake_block
+                        x1_change = 0
+                        break
+                elif event.key == pygame.K_DOWN:
+                    if y1_change != -snake_block:
+                        y1_change = snake_block
+                        x1_change = 0
+                        break
                 elif event.key == pygame.K_q:
                     game_over = True
                     game_close = False
